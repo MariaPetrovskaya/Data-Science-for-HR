@@ -1,7 +1,7 @@
 # Demo Interface
 Развертывание - пока что - в Colab.
 Инструкция:
-- открыть тетрадку по ссылке
+- открыть тетрадку по [ссылке](https://colab.research.google.com/drive/18Yb4WE6mrnstDwquXomb3iIqR2C-1SMd?usp=sharing)
 - последовательно выполнить все команды
 - перейти по публичной ссылке в интерфейс Gradio
 _______

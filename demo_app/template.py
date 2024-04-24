@@ -17,7 +17,7 @@ class GlobalState:
                     1: 'middle',
                     2: 'high'
                     }
-    data = {'id': 'a0000',
+    default_data = {'id': 'a0000',
             'emp_brand': 'Рога и Копыта',
             'test_task': 0,
             'grade': 'junior',
@@ -49,6 +49,7 @@ class GlobalState:
             'conversion': 0,
             'conversion_class': 'unknown'
             }
+    data = None
 
 
 def cid(txt):
@@ -212,6 +213,7 @@ def predict(btn):
     GlobalState.data['conversion_class'] = c_class
     fid = GlobalState.result_file_path
     append_to_json(GlobalState.data, fid)
+    GlobalState.data = GlobalState.default_data
     link = GlobalState.result_file_path
     return gr.update(value=out_1), gr.update(value=out_2), gr.update(link="/file=" + link, visible=True)
 
@@ -224,6 +226,7 @@ def save(btn):
 def main():
     shutil.rmtree(os.path.join(os.path.dirname(__file__), 'result/'), ignore_errors=True)
     os.mkdir(os.path.join(os.path.dirname(__file__), 'result/'))
+    GlobalState.data = GlobalState.default_data
     with gr.Blocks() as demo:
         with gr.Tab("Load"):
             with gr.Row():

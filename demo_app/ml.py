@@ -28,13 +28,15 @@ class VacancyAnalyzer:
         prediction = regressor.predict(pool).tolist()
         return prediction[0]
 
-    def classify(self) -> str:
+    def classify(self) -> tuple:
         df = self.inputs[self.text_features]
         description = df[self.text_features[0]].values[0] + ' '
         for t in self.text_features[1:]:
             description += df[t].values[0]
             description += ' '
         description = self.__cleaner__(description)
+        if len(description) < 100:
+            return 'Too short text', 'unknown'
         tbert = TransformerRegrModel('rubert', 3)
         tbert.load_state_dict(torch.load(self.transformer_path, map_location=torch.device(self.device)))
         tbert.to(self.device)
@@ -42,4 +44,4 @@ class VacancyAnalyzer:
         with torch.no_grad():
             outputs, _, _ = tbert(description)
             prediction = torch.argmax(outputs, 1).cpu().numpy()
-        return prediction
+        return 'Text analyzing finished', prediction

@@ -1,9 +1,5 @@
 # Demo Interface
-Развертывание - пока что - в Colab.
 
-- открыть тетрадку по [ссылке](https://colab.research.google.com/drive/18Yb4WE6mrnstDwquXomb3iIqR2C-1SMd?usp=sharing)
-- последовательно выполнить все команды
-- перейти по публичной ссылке в интерфейс Gradio
 _______
 # Описание полей для пользовательского ввода
 
@@ -29,6 +25,6 @@ _______
 _____
 # Вторая версия
 
-Только с LLM (Tiny-bert). Анализирует только текст. Запуск см. выше,  скрипт gui_tinybert.py
+Только с LLM (Tiny-bert). Анализирует только текст. Запуск [В HuggingFace](https://huggingface.co/spaces/fkonovalenko/llm4career)
 
 

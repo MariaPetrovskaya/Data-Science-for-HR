@@ -1,1 +1,16 @@
+#### Title
+- Tech Recruiters labor market weekly reviev 
+#### Description of the project
+- Dataset: .csv datasets or row job advertisements from HeadHunter(largest job sourse for Russian-speaking), from may 2024
+- Business task: to systematize and analyze information on job offers, to make survey of the current labor market. Prepare data for visual presentation.
+- Presentation of results - clean dataset in .csv format, Jupiter notebook, dashboards.
+- For customer was important: visual presentation "salary" and "skills" features.
+- Markdowns on Russian 
+#### Main tools 
+- Jupiter notebook, Python and Markdown
+####  Machine Learning tools  
+- NLP tools (WordCloud and other)
+#### Conclusions
+- Examples or Tech Recruiters labor market weekly review
+ 
 

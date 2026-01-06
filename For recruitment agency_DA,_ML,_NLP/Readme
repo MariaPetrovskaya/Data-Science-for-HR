@@ -2,3 +2,5 @@
 -March 2024
 - The study focused on the impact of text features on job posting conversion rates. Various statistical and machine learning approaches were used. The best predictive capabilities were achieved using a pre-trained Bert and further data processing using CatBoost.
 English version will be soon
+
+- If priblem with oprening ("too big") Сolab link: https://colab.research.google.com/drive/1jUy5oThTQxPuCwVv2HH5SNB0haAykp9-?usp=drive_link

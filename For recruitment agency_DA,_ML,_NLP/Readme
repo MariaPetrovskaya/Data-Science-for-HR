@@ -1,10 +1,26 @@
-#### NPL, ML
+#### Description of the project
+- Introduction:
+   - March 2024
+   - The study focused on the impact of text features on job posting conversion rates. Various statistical and machine learning approaches were used. The best predictive capabilities were achieved using a pre-trained Bert and further data processing using CatBoost.
+English version will be soon.
+- Dataset:
+- The recruiting agency provided full data of real IT job postings during previous year, including text descriptions and users activity.
+- Business task
+- For customer was important to predict will the response to the job posting be active
 
--March 2024
-- The study focused on the impact of text features on job posting conversion rates. Various statistical and machine learning approaches were used. The best predictive capabilities were achieved using a pre-trained Bert and further data processing using CatBoost.
-English version will be soon
-ML and NLP tools:
-markdown in Russian
-report in PDF file
+#### Main tools 
+- Jupiter notebook, Python and Markdown
+####  Machine Learning tools  
+- ML models GridSearchCV, CatBoost, MultinomialNB, SGDClassifier
+- For text extraction: CountVectorizer, TfidfVectorizer
+- ML metrics f1_weighed 
+#### Conclusions
+- The project is completed
+- For searching best hyperparameters used machine learning algorithm with pipeline, GridSearchCV.
+- Machine learning models were trained and compared, the best model was selected
+- The selected Machine learning model was tested on a test dataset
+- report in PDF file
 
+#### Other
+- markdown in Russian
 - If priblem with oprening ("too big") Сolab link: https://colab.research.google.com/drive/1jUy5oThTQxPuCwVv2HH5SNB0haAykp9-?usp=drive_link

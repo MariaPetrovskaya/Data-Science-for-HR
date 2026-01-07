@@ -19,8 +19,6 @@
 - Model evaluation: MSE, R², MAE, accuracy 
 #### Conclusions
 - The project is completed
-- For searching best hyperparameters used machine learning algorithm with pipeline, GridSearchCV.
-- Machine learning models were trained and compared, the best model was selected
 - The selected Machine learning model was tested on a test dataset
 - report in PDF file
 

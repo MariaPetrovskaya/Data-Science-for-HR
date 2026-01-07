@@ -9,10 +9,14 @@
 
 #### Main tools 
 - Jupiter notebook, Python and Markdown
-####  Machine Learning tools  
-- ML models GridSearchCV, CatBoost, MultinomialNB, SGDClassifier
-- For text extraction: CountVectorizer, TfidfVectorizer
-- ML metrics f1_weighed 
+####  ML and NLP tools  
+- Regression models (linear regression, decision trees, random forest)
+- Gradient boosting (CatBoost, LightGBM)
+- Transformers and BERT models for NLP
+- Clustering (K-means)
+- Text vectorization (TF-IDF)
+- Text preprocessing: tokenization, lemmatization, stop words
+- Model evaluation: MSE, R², MAE, accuracy 
 #### Conclusions
 - The project is completed
 - For searching best hyperparameters used machine learning algorithm with pipeline, GridSearchCV.

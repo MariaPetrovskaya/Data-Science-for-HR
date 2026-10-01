@@ -1,0 +1,85 @@
+# Telegram Channel Content Audit — WAY2WEI Case Study
+
+*[Русская версия ниже / Russian version below](#русская-версия)*
+
+A full-cycle content analytics project: scraping a company's public Telegram channel, classifying 176 posts across six years, and turning raw text into a strategic content audit — used as self-directed research ahead of a marketing interview, not a generic exercise.
+
+## Why this project
+
+Before interviewing for a B2B marketing role at a HR-tech company, I wanted to go beyond reading the company website — I wanted to understand their actual communication pattern over time: what they talk about, how often, and where the gaps are. Rather than guessing, I parsed and analyzed their own public channel.
+
+## Data & Method
+
+- **Source:** public Telegram channel, 176 posts, April 2020 – September 2026 (exported via a Colab scraping tool: `id`, `date`, `text`, `url`)
+- **Tooling:** Python (pandas, `re`), no ML — the analysis deliberately relies on transparent, auditable heuristics rather than a black-box classifier, so every finding can be traced back to a specific regex rule or count
+- **Techniques applied:**
+  - Time-series analysis of posting cadence (by year, month, weekday, hour)
+  - Rule-based content categorization (7 categories: product/CTA, educational, client case study, event, research, etc.) with cross-tabulation by year to detect strategy drift
+  - Keyword-frequency comparison between early-period (2020–2023) and recent-period (2025–2026) vocabulary to surface a tonal shift
+  - Industry/topic coverage mapping against the company's own stated target segments (from their website) to find uncovered niches
+  - External-link and hashtag-usage audit
+
+## Key findings
+
+- Posting volume was flat for three years (13–19 posts/year, 2020–2023), then grew ~2.5x starting 2024 — a clear inflection point in content investment.
+- Content mix shifted materially: in 2026, ~53% of posts carry a direct CTA (up from a roughly even 3-way split between CTA / educational / case-study content in 2025) — while client case studies, historically the strongest trust-building format, nearly disappeared (16 → 2 posts).
+- Vocabulary analysis shows a shift from conceptual language ("emotion," "ability," "development") in 2020–2023 to instrumental, product-centric language ("solutions," "data," "potential," "reserve") in 2025–2026.
+- Despite the company's own website naming manufacturing, hospitality, consulting and startups as target industries, the channel's content is overwhelmingly skewed toward IT (30 mentions) — a measurable gap between stated ICP and actual content focus.
+- One specific, high-relevance topic — new-employee onboarding / first 90 days — was never covered directly across 176 posts, despite being directly addressed by one of the company's own products.
+
+## Deliverables
+
+- `WAY2WEI_TG_content_analysis.md` — full written report (8 sections: cadence, content mix, vocabulary shift, format audit, industry coverage, content gaps, recommendations)
+- A sample content piece written in the channel's own voice (tone, structure, link placement) to close one of the identified gaps, as a practical demonstration of the findings rather than a purely academic exercise
+
+## Skills demonstrated
+
+Data wrangling and classification with pandas · time-series and categorical analysis · competitive/content-strategy auditing · translating quantitative findings into actionable marketing recommendations · bilingual (RU/EN) technical writing
+
+## Notes
+
+This is applied, scrappy analysis built for a real decision (interview prep), not a polished production pipeline — categorization rules are intentionally simple (regex-based) and documented inline rather than hidden behind a model, so a reader can verify or extend them in minutes.
+
+---
+
+## Русская версия
+
+# Контент-аудит Telegram-канала — кейс WAY2WEI
+
+Проект полного цикла: парсинг публичного Telegram-канала компании, классификация 176 постов за шесть лет и превращение сырого текста в стратегический контент-аудит — подготовлено как самостоятельное исследование перед собеседованием на позицию маркетолога, а не как учебное упражнение.
+
+## Зачем
+
+Перед собеседованием на позицию B2B маркетолога в HR-tech компании я хотела понять не только то, что написано на сайте, но и реальный паттерн коммуникации компании во времени: о чём она говорит, как часто, и где остаются пробелы. Вместо предположений — спарсила и проанализировала их собственный публичный канал.
+
+## Данные и метод
+
+- **Источник:** публичный Telegram-канал, 176 постов, апрель 2020 — сентябрь 2026 (выгрузка через Colab-скрипт парсинга: поля `id`, `date`, `text`, `url`)
+- **Инструменты:** Python (pandas, `re`), без ML — сознательный выбор в пользу прозрачных, проверяемых эвристик вместо «чёрного ящика»-классификатора, чтобы каждый вывод можно было проследить до конкретного правила или подсчёта
+- **Применённые техники:**
+  - Временной анализ кадентности публикаций (по годам, месяцам, дням недели, часам)
+  - Категоризация контента по правилам (7 категорий: продукт/CTA, образовательный, кейс клиента, мероприятие, исследование и др.) с кросс-табуляцией по годам для выявления сдвига стратегии
+  - Сравнение частотности ключевых слов между ранним (2020–2023) и недавним (2025–2026) периодами для выявления смены риторики
+  - Картирование отраслевого/тематического охвата против заявленных на сайте компании целевых сегментов — поиск незакрытых ниш
+  - Аудит использования внешних ссылок и хэштегов
+
+## Ключевые находки
+
+- Объём публикаций был стабильно низким три года подряд (13–19 постов/год, 2020–2023), затем вырос примерно в 2,5 раза начиная с 2024 года — явная точка перелома в инвестициях в контент.
+- Структура контента заметно изменилась: в 2026 году ~53% постов содержат прямой CTA (против примерно равного распределения CTA/образовательного/кейсового контента в 2025) — при этом кейсы клиентов, исторически самый сильный формат для построения доверия, почти исчезли (16 → 2 поста).
+- Анализ лексики показывает сдвиг от концептуального языка («эмоции», «способность», «развитие») в 2020–2023 к инструментальному, продуктовому языку («решения», «данные», «потенциал», «резерв») в 2025–2026.
+- Несмотря на то что сайт компании сам называет производство, гостиничный бизнес, консалтинг и стартапы целевыми отраслями, контент канала сильно перекошен в сторону IT (30 упоминаний) — измеримый разрыв между заявленным ICP и реальным фокусом контента.
+- Одна конкретная, высокорелевантная тема — адаптация новых сотрудников / первые 90 дней — ни разу не была раскрыта напрямую за всю историю из 176 постов, несмотря на то что именно её напрямую закрывает один из продуктов компании.
+
+## Результаты проекта
+
+- `WAY2WEI_TG_content_analysis.md` — полный письменный отчёт (8 разделов: кадентность, структура контента, смена риторики, аудит форматов, отраслевой охват, контентные ниши, рекомендации)
+- Пример контента, написанный в голосе канала (тон, структура, расположение ссылки), закрывающий одну из найденных ниш — практическая демонстрация выводов, а не чисто академическое упражнение
+
+## Продемонстрированные навыки
+
+Работа с данными и классификация в pandas · временной и категориальный анализ · аудит контент-стратегии конкурентов/работодателей · перевод количественных находок в применимые маркетинговые рекомендации · двуязычный (RU/EN) технический текст
+
+## Примечания
+
+Это прикладной, «быстрый» анализ, сделанный под реальное решение (подготовка к интервью), а не отполированный продакшн-пайплайн — правила категоризации намеренно простые (на регулярных выражениях) и задокументированы прямо в коде, а не спрятаны за моделью, чтобы любой читающий мог проверить или расширить их за несколько минут.
